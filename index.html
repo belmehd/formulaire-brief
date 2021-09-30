@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>formulaire</title>
+    </head>
+
+    <body>
+        <form method="POST" action="traitement.php">
+            <fieldset>
+                <legend>Votre identitée</legend>
+                <p>
+                    <label for="prenom">Votre prénom</label>
+                    <input type="text" name="prénom" placeholder="entrer votre prénom" id="prenom" autofocus required pattern="[a-zA-Z]+"/>
+                </p>
+
+                <p>
+                    <label for="nom">Votre nom</label>
+                    <input type="text" name="nom" placeholder="entrer votre nom" id="nom" required pattern="[a-zA-Z]+"/>
+                </p>
+
+                <p>
+                    <label for="age">Votre âge</label>
+                    <input type="number" name="age" placeholder="votre âge" min="7" max="1000" id="age" required/>
+                </p>
+
+                
+                <p>Votre genre :</p>
+                <p>
+                    <input type="radio" name="genre" value="homme" id="genre1"/>
+                    <label for="genre1">homme</label>
+
+                    <input type="radio" name="genre" value="femme" id="genre2"/>
+                    <label for="genre2">femme</label>
+                </p>
+
+                <p>
+                    <label for="autre">autre</label>
+                    <input type="text" name="autre" id="autre" placeholder="Veuillez préciser"/>
+                </p>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Vos contacts</legend>
+                <p>
+                    <label for="mail">Votre adresse mail</label>
+                    <input type="email" id="mail" name="mail" placeholder="example@mail.com" required/>
+                </p>
+                <p>
+                    <label for="adresse">Votre adresse postale</label>
+                    <input type="text" placeholder="10 rue des prunes" id="adresse" name="adresse" required/>
+                    <label for="code">Code postale</label>
+                    <input type="text" placeholder="code postale" id="code" name="adresse" required pattern="[0-9]{5}"/>
+                    <label for="ville">Votre ville</label>
+                    <input type="text" id="ville" name="adresse" placeholder="votre ville" required/>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre nationalité</legend>
+                <p>
+                    <label for="nationalite">Nationalité</label>
+                    <input type="text" id="nationalite" placeholder="française" name="nationalité" required/>
+                </p>
+                <p>
+                    <label for="datedenaissance">Votre date de naissance</label>
+                    <input type="date" id="datedenaissance" name="datedenaissance" required/>
+                </p>
+                <p>
+                    <label for="paysdenaissance">Votre pays de naissance</label>
+                    <select name="paysdenaissance" id="paysdenaissance">
+                        
+                        <optgroup label="Europe">
+                            <option value="france">France</option>
+                            <option value="espagne">Espagne</option>
+                            <option value="allemagne">Allemagne</option>
+                            <option value="royaume-unis">Royaume-Unis</option>
+                            <option value="italie">Italie</option>
+                            <option value="portugal">Portugal</option>
+                        </optgroup>
+
+                        <optgroup label="Afrique">
+                            <option value="somalie">Somalie</option>
+                            <option value="soudan">Soudan</option>
+                            <option value="république centrafricaine">République Centrafricaine</option>
+                            <option value="botswana">Botswana</option>
+                            <option value="cameroun">Cameroun</option>
+                            <option value="côte d’ivoire">Côte d’Ivoire</option>
+                        </optgroup>
+
+                        <optgroup label="Asie">
+                            <option value="chine">Chine</option>
+                            <option value="arabie saoudite">Arabie saoudite</option>
+                            <option value="inde">Inde</option>
+                            <option value="vietnam">Vietnam</option>
+                            <option value="ouzbékistan">Ouzbékistan</option>
+                            <option value="philippines">Philippines</option>
+                        </optgroup>
+                        
+                        <optgroup label="Amériques">
+                            <option value="etats-unis">Etats-Unis</option>
+                            <option value="mexique">Mexique</option>
+                            <option value="canada">Canada</option>
+                            <option value="colombie">Colombie</option>
+                            <option value="pérou">Pérou</option>
+                            <option value="brézil">Brézil</option>
+                        </optgroup>
+
+                        <optgroup label="Océanie">
+                            <option value="australie">Australie</option>
+                            <option value="papouasie-nouvelle-guinée">Papouasie-Nouvelle-Guinée</option>
+                            <option value="nouvelle-zélande">Nouvelle-Zélande</option>
+                            <option value="fidji">Fidji</option>
+                        </optgroup>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Vos informations personelles</legend>
+                <p>
+                    <label for="metier">Votre métier</label>
+                    <select name="les-metier" id="metier">
+                        <option value="management, pilotage et contrôle">management, pilotage et contrôle</option>
+                        <option value="bibliothèques, documentation, archives et musées">bibliothèques, documentation, archives et musées</option>
+                        <option value="santé-social">santé-social</option>
+                        <option value="études et évaluation des politiques publiques">études et évaluation des politiques publiques</option>
+                        <option value="ressources humaines">ressources humaines</option>
+                        <option value="gestion budgétaire, finances et comptable">gestion budgétaire, finances et comptable</option>
+                        <option value="affaires juridiques">affaires juridiques</option>
+                        <option value="administration générale">administration générale</option>
+                        <option value="logistique immobilière, technique et de services">logistique immobilière, technique et de services</option>
+                        <option value="systèmes et réseaux d’information et de communication">systèmes et réseaux d’information et de communication</option>
+                        <option value="communication - édition">communication - édition</option>
+                        <option value="interim">interim</option>
+                        <option value="sans-emploi">sans-emploi</option>
+                    </select>
+                    
+                </p>
+                <p>
+                    <label for="numdesecu">Votre numéro de sécurité social</label>
+                    <input type="number" id="numdesecu" min="1000000000000" max="2999999999999" name="numdesecu" placeholder="1750514222333" required/>
+                </p>
+                <p>
+                    <label>Votre numéro du passeport</label>
+                    <input type="text" maxlength="2" name="numdepassport1" placeholder="25" required pattern="[0-9]{2}"/>
+                    <input type="text" maxlength="2" name="numdepassport2" placeholder="fg" required pattern="[a-zA-Z]+{2}"/>
+                    <input type="text" maxlength="5" name="numdepassport3" placeholder="75325" required pattern="[0-9]{5}"/>
+                </p>
+                <p>
+                    <label for="datepassport1">La date de délivrance du passeport</label>
+                    <input type="date" id="datepassport1" name="datepassport1" required/>
+                </p>
+                <p>
+                    <label for="datepassport2">La date de validité du passeport</label>
+                    <input type="date" id="datepassport2" name="datepassport2" required/>
+                </p>
+            </fieldset>
+
+            <input type="submit" value="Envoyer"/>
+        </form>
+    </body>
+</html>
